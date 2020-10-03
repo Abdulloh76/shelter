@@ -3,8 +3,7 @@
    border-radius: 100px;
    outline: none;
    @include font(1.7rem, 1.3em);
-   font-family: Georgia, 'Times New Roman', Times, serif;
-   letter-spacing: 0.06em;
+   @include george-space();
    color: $color-dark-3xl;
 }
 

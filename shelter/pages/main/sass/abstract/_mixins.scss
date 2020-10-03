@@ -4,3 +4,8 @@
    font-size: $size;
    line-height: $height;
 }
+
+@mixin george-space($letter-space: 0.06em) {
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   letter-spacing: $letter-space;
+}

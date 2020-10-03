@@ -1,0 +1,25 @@
+.about {
+   padding: 80px 0 100px;
+   background-color: $color-light;
+
+   &__wrapper {
+      @extend %flex-center;
+   }
+
+   &__content {
+      width: 430px;
+      margin-left: 120px;
+   }
+
+   &__title {
+      width: 370px;
+   }
+
+   &__text {
+      margin: 25px 0;
+      &:last-child {
+         margin: 0;
+      }
+   }
+
+}
