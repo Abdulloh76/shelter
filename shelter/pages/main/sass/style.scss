@@ -5,10 +5,13 @@
 @import 'abstract/placeholders';
 
 @import 'base/base';
+@import 'base/logo';
+@import 'base/buttons';
 
 @import 'layouts/header';
 @import 'layouts/navigation';
 @import 'layouts/footer';
 
-// @import 'components';
+@import 'components/start-screen';
+
 

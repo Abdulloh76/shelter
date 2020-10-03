@@ -1,0 +1,15 @@
+.logo {
+   height: 100%;
+   @extend %flex-between;
+   flex-direction: column;
+
+   &__title {
+      color: $color-primary;
+   }
+
+   &__subtitle {
+      @include font(1.3rem, 1.15em);
+      letter-spacing: 0.1em;
+      color: $color-light;
+   }
+}

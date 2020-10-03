@@ -1,0 +1,14 @@
+.button-rounded {
+   padding: 15px 45px;
+   border-radius: 100px;
+   outline: none;
+   @include font(1.7rem, 1.3em);
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   letter-spacing: 0.06em;
+   color: $color-dark-3xl;
+}
+
+.button_primary {
+   background-color: $color-primary;
+   border: none;
+}

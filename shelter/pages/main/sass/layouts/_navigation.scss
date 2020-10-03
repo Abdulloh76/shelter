@@ -1,0 +1,29 @@
+.navigation {
+   
+   &__list {
+      @extend %flex-between;  
+      
+   }
+
+   &__item {
+      margin-left: 35px;
+      list-style-type: none;
+   }
+   
+   &__link {
+      color: $color-dark-s;
+      text-decoration: none;
+      &:hover {
+         color: $color-light-s;
+      }
+      &:visited {
+         text-decoration: none;
+      }
+   }
+   
+   .active {
+      color: $color-light-s;
+      border-bottom: $color-primary 3px solid;
+   }
+
+}
