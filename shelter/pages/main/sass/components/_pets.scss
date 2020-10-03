@@ -1,0 +1,28 @@
+.pets {
+   padding: 80px 0 100px;
+   background-color: $color-light-l;
+   text-align: center;
+
+   &__wrapper {
+      @extend %flex-center;
+      flex-direction: column;
+   }
+
+   &__title {
+      width: 400px;
+   }
+
+   &__content {
+      width: 100%;
+      @extend %flex-between;
+      margin: 60px 0;
+   }
+   
+   &__carousel {
+      @extend %flex-between;
+   }
+
+   &__card:nth-child(2) {
+      margin: 0 90px;
+   }
+}

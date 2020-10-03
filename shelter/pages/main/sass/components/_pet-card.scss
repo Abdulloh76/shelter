@@ -1,0 +1,21 @@
+.pet {
+   @extend %flex-center;
+   flex-direction: column;
+   border-radius: 9px;
+   background-color: $color-light-s;
+   cursor: pointer;
+   
+   &:hover {
+      background-color: $color-light;
+   }
+   
+   & > * {
+      margin-bottom: 30px;
+   }
+
+   &__img {
+      border-top-left-radius: 9px;
+      border-top-right-radius: 9px;   
+   }
+
+}

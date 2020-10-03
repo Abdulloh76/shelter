@@ -1,13 +1,41 @@
-.button-rounded {
-   padding: 15px 45px;
+.button-square {
    border-radius: 100px;
    outline: none;
    @include font(1.7rem, 1.3em);
    @include george-space();
    color: $color-dark-3xl;
+   
+   &:hover {
+      background-color: $color-primary-light;
+      border-color: $color-primary-light;
+   }
 }
 
 .button_primary {
+   padding: 15px 45px;
    background-color: $color-primary;
    border: none;
+}
+
+.button_secondary {
+   padding: 13px 43px;
+   border: $color-primary 2px solid;
+   background-color: inherit;
+}
+
+.button-rounded {
+   width: 52px;
+   height: 52px;
+   border-radius: 50%;
+   border: $color-primary 2px solid;
+   @extend %flex-center;
+   @include font(2rem, 1.15em);
+   @include george-space();
+   color: $color-dark-3xl;
+   outline: none;
+   
+   &:hover {
+      background-color: $color-primary-light;
+      border-color: $color-primary-light;
+   }
 }

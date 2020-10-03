@@ -399,13 +399,13 @@ th {
   box-sizing: border-box;
 }
 
-.start-screen__wrapper, .navigation__list, .header__wrapper, .logo {
+.pets__carousel, .pets__content, .start-screen__wrapper, .navigation__list, .header__wrapper, .logo {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.about__wrapper {
+.pet, .pets__wrapper, .about__wrapper, .button-rounded {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -512,8 +512,7 @@ a:visited {
   color: #FFFFFF;
 }
 
-.button-rounded {
-  padding: 15px 45px;
+.button-square {
   border-radius: 100px;
   outline: none;
   font-style: normal;
@@ -524,10 +523,40 @@ a:visited {
   letter-spacing: 0.06em;
   color: #292929;
 }
+.button-square:hover {
+  background-color: #FDDCC4;
+  border-color: #FDDCC4;
+}
 
 .button_primary {
+  padding: 15px 45px;
   background-color: #F1CDB3;
   border: none;
+}
+
+.button_secondary {
+  padding: 13px 43px;
+  border: #F1CDB3 2px solid;
+  background-color: inherit;
+}
+
+.button-rounded {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: #F1CDB3 2px solid;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 1.15em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  letter-spacing: 0.06em;
+  color: #292929;
+  outline: none;
+}
+.button-rounded:hover {
+  background-color: #FDDCC4;
+  border-color: #FDDCC4;
 }
 
 .header {
@@ -593,6 +622,42 @@ a:visited {
 }
 .about__text:last-child {
   margin: 0;
+}
+
+.pets {
+  padding: 80px 0 100px;
+  background-color: #F6F6F6;
+  text-align: center;
+}
+.pets__wrapper {
+  flex-direction: column;
+}
+.pets__title {
+  width: 400px;
+}
+.pets__content {
+  width: 100%;
+  margin: 60px 0;
+}
+.pets__card:nth-child(2) {
+  margin: 0 90px;
+}
+
+.pet {
+  flex-direction: column;
+  border-radius: 9px;
+  background-color: #FAFAFA;
+  cursor: pointer;
+}
+.pet:hover {
+  background-color: #FFFFFF;
+}
+.pet > * {
+  margin-bottom: 30px;
+}
+.pet__img {
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
 }
 
 /*# sourceMappingURL=style.css.map */
