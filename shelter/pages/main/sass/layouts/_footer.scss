@@ -1,0 +1,49 @@
+.footer {
+   background: 
+      url(../../assets/images/noise_transparent@2x.png), 
+      radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%),
+      #211F20;;
+   padding: 40px 40px 0 40px;
+
+   &__wrapper {
+      @extend %flex-between;
+   }
+
+   &__contacts {
+      max-width: 279px;
+      margin-bottom: 43px;
+   }
+   
+   &__locations {
+      max-width: 302px;
+      margin-bottom: 43px;
+
+   }
+
+   &__title {
+      color: $color-light;
+   }
+
+   &_ico {
+      margin-right: 20px;
+   }
+
+   h4 {
+      color: $color-primary;      
+   }
+   
+   &__link {
+      @extend %flex-center;
+      display: inline-flex;
+      
+   }
+   
+   .contacts__email {
+      margin: 40px 0;
+   }
+   
+   .location-boston {
+      margin: 33px 0;
+   }
+
+}
