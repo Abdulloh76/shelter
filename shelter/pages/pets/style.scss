@@ -1,0 +1,18 @@
+@import '../../assets/sass/base/normalize';
+
+@import '../../assets/sass/abstract/constants';
+@import '../../assets/sass/abstract/mixins';
+@import '../../assets/sass/abstract/placeholders';
+
+@import '../../assets/sass/base/base';
+@import '../../assets/sass/base/logo';
+@import '../../assets/sass/base/buttons';
+
+@import '../../assets/sass/layouts/header';
+@import '../../assets/sass/layouts/navigation';
+@import '../../assets/sass/layouts/footer';
+
+
+@import '../../assets/sass/components/pets';
+@import '../../assets/sass/components/pet-card';
+
