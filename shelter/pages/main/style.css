@@ -542,6 +542,7 @@ a:visited {
   padding: 13px 43px;
   border: #F1CDB3 2px solid;
   background-color: inherit;
+  box-sizing: border-box;
 }
 
 .button-rounded {
@@ -561,6 +562,19 @@ a:visited {
 .button-rounded:hover {
   background-color: #FDDCC4;
   border-color: #FDDCC4;
+}
+.button-rounded_colored {
+  background-color: #F1CDB3;
+  border: none;
+}
+
+.pagination_inactive {
+  border-color: #CDCDCD;
+  color: #CDCDCD;
+}
+.pagination_inactive:hover {
+  border-color: #CDCDCD;
+  background-color: inherit;
 }
 
 .header {

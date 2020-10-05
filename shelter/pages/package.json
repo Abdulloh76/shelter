@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "style-main": "sass --watch main/style.scss main/style.css",
-    "style-pets": "sass --watch pets/style.scss pets/style.css"
+    "style-main": "sass main/style.scss main/style.css",
+    "style-pets": "sass pets/style.scss pets/style.css"
   },
   "author": "",
   "license": "ISC"

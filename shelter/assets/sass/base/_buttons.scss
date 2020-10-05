@@ -21,6 +21,7 @@
    padding: 13px 43px;
    border: $color-primary 2px solid;
    background-color: inherit;
+   box-sizing: border-box;
 }
 
 .button-rounded {
@@ -37,5 +38,20 @@
    &:hover {
       background-color: $color-primary-light;
       border-color: $color-primary-light;
+   }
+
+   &_colored {
+      background-color: $color-primary;
+      border: none;
+   }
+}
+
+.pagination_inactive {
+   // border-style: solid;
+   border-color: $color-dark-s;
+   color: $color-dark-s;
+   &:hover {
+      border-color: $color-dark-s;
+      background-color: inherit;
    }
 }
