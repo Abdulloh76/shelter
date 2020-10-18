@@ -10,6 +10,15 @@ html {
 .wrapper {
    max-width: $wrapper-width;
    margin: auto;
+   
+   @include media-laptop {
+      padding: 0 30px;
+   }
+
+   @include media-tablet {
+      padding: 0 10px;
+   }
+   
 }
 
 h1 {
@@ -55,4 +64,8 @@ a {
    &:visited {
       text-decoration: none;
    }
+}
+
+.hidden {
+   display: none;
 }

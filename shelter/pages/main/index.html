@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width">
    <title>Shelter</title>
    <link rel="icon" href="https://www.flaticon.com/svg/static/icons/svg/3175/3175912.svg">
    <link rel="stylesheet" href="style.css">
@@ -16,14 +17,20 @@
                <h1 class="logo__title">Cozy House</h1>
                <p class="logo__subtitle">Shelter for pets in Boston</p>
             </a>
-   
-            <nav class="navigation">
+
+            <span class="header__burger burger ">
+               <span class="burger__line"></span>
+               <span class="burger__line"></span>
+               <span class="burger__line"></span>
+            </span>
+
+            <nav class="navigation navigation-active">
                <ul class="navigation__list">
                   <li class="navigation__item paragraph_L active">
                      <a href="" class="navigation__link">About the shelter</a>
                   </li>
                   <li class="navigation__item paragraph_L">
-                     <a href="" class="navigation__link">Our pets</a>
+                     <a href="../pets/" class="navigation__link">Our pets</a>
                   </li>
                   <li class="navigation__item paragraph_L">
                      <a href="" class="navigation__link">Help the shelter</a>
@@ -103,7 +110,7 @@
                </svg>                  
             </button>
          </div>
-         <button class="button-square button_primary pets__button">Get to know the rest</button>
+         <a href="../pets/" class="button-square button_primary pets__button">Get to know the rest</a>
 
       </div>
    </section>

@@ -1,15 +1,38 @@
 .logo {
-   height: 100%;
+   display: inline-block;
    @extend %flex-between;
    flex-direction: column;
 
    &__title {
       color: $color-primary;
+      margin-bottom: 10px;
    }
 
    &__subtitle {
       @include font(1.3rem, 1.15em);
       letter-spacing: 0.1em;
       color: $color-light;
+   }
+}
+
+.burger {
+   display: none;
+   height: 22px;
+   width: 30px;
+   @extend %flex-between;
+   flex-direction: column;
+   margin-left: 43px;
+   &__line {
+      height: 2px;
+      width: 30px;
+      background-color: $color-primary;
+   }
+
+   &-active {
+      transform: rotate(90deg);
+   }
+
+   @include media-tablet {
+      display: flex;
    }
 }
