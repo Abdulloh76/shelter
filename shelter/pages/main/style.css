@@ -872,13 +872,54 @@ a:visited {
   background-color: #FFFFFF;
 }
 
+@media (max-width: 767px) {
+  .about {
+    padding: 42px 0;
+  }
+}
+
+@media (max-width: 1279px) {
+  .about__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
 .about__content {
-  width: 430px;
+  max-width: 430px;
   margin-left: 120px;
 }
 
+@media (max-width: 1279px) {
+  .about__content {
+    margin-left: 0;
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 767px) {
+  .about__content {
+    margin-bottom: 42px;
+  }
+}
+
 .about__title {
-  width: 370px;
+  max-width: 370px;
+}
+
+@media (max-width: 767px) {
+  .about__title {
+    max-width: 80%;
+    text-align: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.5rem;
+    line-height: 1.3em;
+    letter-spacing: 0.06em;
+    margin: auto;
+  }
 }
 
 .about__text {
@@ -886,7 +927,21 @@ a:visited {
 }
 
 .about__text:last-child {
-  margin: 0;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .about__text {
+    max-width: 90%;
+    text-align: justify;
+    margin: 25px auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .about__pets {
+    max-width: 86%;
+  }
 }
 
 .pets {
