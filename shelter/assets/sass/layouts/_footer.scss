@@ -3,25 +3,50 @@
       url(../../assets/images/noise_transparent@2x.png), 
       radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%),
       #211F20;;
-   padding: 40px 40px 0 40px;
+   padding: 40px 40px 0;
+   @include media-laptop{
+      padding: 30px 0 0;
+   }
+   @include media-tablet{
+      padding: 30px 0 0;
+      text-align: center;
+   }
 
    &__wrapper {
       @extend %flex-between;
+      flex-wrap: wrap;
+      @include  media-laptop{
+         justify-content: space-around;
+      }
    }
 
    &__contacts {
       max-width: 279px;
-      margin-bottom: 43px;
    }
    
    &__locations {
       max-width: 302px;
+   }
+   
+   &__section{
       margin-bottom: 43px;
-
+      @include media-laptop{
+         margin-bottom: 65px;
+      }
+      @include media-tablet{
+         width: 100%;
+         margin-bottom: 40px;
+      }
    }
 
    &__title {
       color: $color-light;
+      @include media-tablet {
+         width: 95%;
+         margin: auto;
+         @include font(2.5rem, 1.3em);
+         letter-spacing: 0.06em;
+      }
    }
 
    &_ico {
@@ -44,6 +69,12 @@
    
    .location-boston {
       margin: 33px 0;
+   }
+
+   &__puppy{
+      @media (max-width: 414px) {
+         width: 81%;
+      }
    }
 
 }
