@@ -1081,6 +1081,12 @@ a:visited {
   text-align: center;
 }
 
+@media (max-width: 767px) {
+  .help {
+    padding: 42px 0 12px;
+  }
+}
+
 .help__wrapper {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1092,11 +1098,38 @@ a:visited {
   max-width: 310px;
 }
 
+@media (max-width: 767px) {
+  .help__title {
+    max-width: 230px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.5rem;
+    line-height: 1.3em;
+    letter-spacing: 0.06em;
+  }
+}
+
 .help__list {
-  width: 1026px;
+  width: 100%;
   margin-top: 60px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+@media (max-width: 1279px) {
+  .help__list {
+    width: 82%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (max-width: 767px) {
+  .help__list {
+    width: 95%;
+    margin-top: 42px;
+  }
 }
 
 .help__item {
@@ -1112,12 +1145,53 @@ a:visited {
   margin-right: 0;
 }
 
+@media (max-width: 1279px) {
+  .help__item {
+    margin-right: 0px;
+    width: 170px;
+  }
+}
+
+@media (max-width: 767px) {
+  .help__item {
+    max-width: 130px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .help__img {
+    width: 50px;
+  }
+}
+
 .help__name {
   margin-top: 30px;
 }
 
+@media (max-width: 767px) {
+  .help__name {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 1.1em;
+    margin-top: 20px;
+  }
+}
+
 .donation {
   background: #F6F6F6;
+}
+
+@media (max-width: 767px) {
+  .donation {
+    padding: 42px 0;
+  }
+}
+
+.donation__wrapper {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .donation__information {
@@ -1126,12 +1200,46 @@ a:visited {
   margin-left: 30px;
 }
 
+@media (max-width: 1279px) {
+  .donation__information {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin-bottom: 60px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .donation__information {
+    text-align: center;
+  }
+}
+
 .donation__title {
   max-width: 300px;
 }
 
+@media (max-width: 767px) {
+  .donation__title {
+    max-width: 210px;
+    margin: auto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.5rem;
+    line-height: 1.3em;
+    letter-spacing: 0.06em;
+  }
+}
+
 .donation__subheading {
   margin: 20px 0;
+}
+
+@media (max-width: 767px) {
+  .donation__subheading {
+    letter-spacing: 0;
+  }
 }
 
 .donation__credit-card {
@@ -1148,7 +1256,28 @@ a:visited {
   margin-left: 15px;
 }
 
+@media (max-width: 767px) {
+  .donation .credit-card_number {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 1.1em;
+  }
+}
+
 .donation__text {
   color: #B2B2B2;
+}
+
+@media (max-width: 767px) {
+  .donation__text {
+    text-align: justify;
+  }
+}
+
+@media (max-width: 767px) {
+  .donation__dog {
+    width: 76%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -2,6 +2,9 @@
    @extend %padding-80-100;
    padding-bottom: 45px;
    text-align: center;
+   @include media-tablet {
+      padding: 42px 0 12px;
+   }
 
    &__wrapper {
       @extend %flex-between;
@@ -10,14 +13,27 @@
 
    &__title {
       max-width: 310px;
+      @include media-tablet{
+         max-width: 230px;
+         @include font(2.5rem, 1.3em);
+         letter-spacing: 0.06em;
+      }
    }
 
    &__list {
-      width: 1026px;
+      width: 100%;
       margin-top: 60px;
       @extend %flex-center;
       flex-wrap: wrap;
       
+      @include media-laptop{
+         width: 82%;
+         justify-content: space-between;
+      }
+      @include  media-tablet{
+         width: 95%;
+         margin-top: 42px;
+      }
    }
    
    &__item {
@@ -25,13 +41,36 @@
       flex-direction: column;
       margin-right: 119px;
       margin-bottom: 55px;
-
+      
       &:nth-child(5), &:last-child {
          margin-right: 0;
       }
-   }
+      
+      @include media-laptop {
+         margin-right: 0px;
+         width: 170px;
+      }
+      
+      @include media-tablet{
+         max-width: 130px;
+         margin-bottom: 30px;
 
+      }
+   }
+   
+   &__img{
+      
+      @include media-tablet{
+         width: 50px;   
+      }
+   }
+   
    &__name {
       margin-top: 30px;
+      @include media-tablet{
+         @include font(1.5rem, 1.1em);
+         margin-top: 20px;
+         
+      }
    }
 }
