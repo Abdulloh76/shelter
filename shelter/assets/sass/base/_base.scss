@@ -4,6 +4,12 @@ html {
    scroll-behavior: smooth;
 }
 
+body{
+   @include media-tablet{
+      overflow-x: hidden;
+   }
+}
+
 * {
    margin: 0;
 }

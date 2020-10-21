@@ -22,6 +22,9 @@
    @extend %flex-between;
    flex-direction: column;
    margin-left: 43px;
+   cursor: pointer;
+   z-index: 3;
+   transition: transform 0.5s ease;
    &__line {
       height: 2px;
       width: 30px;

@@ -13,18 +13,20 @@
       <header class="header">
          <div class="wrapper header__wrapper">
    
-            <a href="#" class="logo">
-               <h1 class="logo__title">Cozy House</h1>
-               <p class="logo__subtitle">Shelter for pets in Boston</p>
-            </a>
+            <div class="header__logo">
+               <a href="#" class="logo">
+                  <h1 class="logo__title">Cozy House</h1>
+                  <p class="logo__subtitle">Shelter for pets in Boston</p>
+               </a>
+   
+               <span class="header__burger burger ">
+                  <span class="burger__line"></span>
+                  <span class="burger__line"></span>
+                  <span class="burger__line"></span>
+               </span>
+            </div>
 
-            <span class="header__burger burger ">
-               <span class="burger__line"></span>
-               <span class="burger__line"></span>
-               <span class="burger__line"></span>
-            </span>
-
-            <nav class="navigation navigation-active">
+            <nav class="navigation ">
                <ul class="navigation__list">
                   <li class="navigation__item paragraph_L active">
                      <a href="#" class="navigation__link">About the shelter</a>
@@ -49,7 +51,7 @@
          <div class="start-screen__content">
             <h2 class="start-screen__title">Not only people need a house</h2>
             <p class="paragraph_L start-screen__text">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
-            <button class="button-square button_primary start-screen__button">Make a friend</button>
+            <a href="../pets/" class="button-square button_primary start-screen__button">Make a friend</a>
          </div>
 
          <img src="../../assets/images/start-screen-puppy.png" alt="Puppy" class="start-screen__puppy">
@@ -215,5 +217,7 @@
       </div>
    </footer>
    
+   <script src="../index.js" type="module"></script>
+
 </body>
 </html>
