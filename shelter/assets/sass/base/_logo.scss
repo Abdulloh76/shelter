@@ -35,4 +35,9 @@
    @include media-tablet {
       display: flex;
    }
+   &-dark{
+      .burger__line{
+         background-color: $color-dark;
+      }
+   }
 }

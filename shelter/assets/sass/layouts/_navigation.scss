@@ -49,4 +49,21 @@
       border-bottom: $color-primary 3px solid;
    }
 
+   &-light {
+      @include media-tablet {
+         background-color: $color-light-s;
+      }
+
+      .navigation__link {
+         color: $color-dark-l;
+         &:hover {
+            color: $color-dark-3xl;
+         }
+      }
+      
+      .active {
+         color: $color-dark-l;
+      }
+   }
+
 }
