@@ -412,7 +412,7 @@ th {
           align-items: center;
 }
 
-.button-rounded, .header__logo, .footer__link, .about__wrapper, .pets__wrapper, .pet, .help__list, .help__item, .donation__wrapper, .donation__credit-card {
+.button-rounded, .header__logo, .footer__link, .about__wrapper, .pets__wrapper, .pet, .help__list, .help__item, .donation__wrapper, .donation__credit-card, .overlay, .pop-up__content, .pet-information {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1397,5 +1397,77 @@ a:visited {
   .donation__dog {
     width: 76%;
   }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(41, 41, 41, 0.6);
+}
+
+.pop-up {
+  border-radius: 9px;
+  position: relative;
+  background-color: #FFFFFF;
+}
+
+.pop-up__img {
+  width: 500px;
+  border-radius: 9px 0 0 9px;
+}
+
+.pop-up__cancel {
+  position: absolute;
+  top: -45px;
+  right: -45px;
+  background-color: unset;
+}
+
+.pet-information {
+  width: 351px;
+  padding: 0 20px 0 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.pet-breed {
+  margin-top: 10px;
+}
+
+.pet-description {
+  margin: 40px 0;
+}
+
+.pet-properties {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 1.1em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  letter-spacing: 0.06em;
+  list-style-type: none;
+}
+
+.pet-properties li::before {
+  content: "\2022";
+  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #F1CDB3;
+  /* Change the color */
+  font-weight: bold;
+  /* If you want it to be bold */
+  display: inline-block;
+  /* Needed to add space between the bullet and the text */
+  width: 1em;
+  /* Also needed for space (tweak if needed) */
+  margin-left: -2.5em;
+  /* Also needed for space (tweak if needed) */
 }
 /*# sourceMappingURL=style.css.map */
