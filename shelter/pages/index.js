@@ -1,4 +1,5 @@
 import { generatePets, generateCard, sort6recursively } from './petsContent.js';
+import { PopUp } from './PopUp.js';
 
 const contentWidth = window.innerWidth;
 const cardsNumber = contentWidth >= 1280 ? 8 : contentWidth >= 768 ? 6 : 3;
@@ -11,7 +12,8 @@ const logo = document.querySelector('.header__logo');
 const showNavBar = () => {
 	burger.classList.toggle('burger-active');
 	navBar.classList.toggle('navigation-active');
-	logo.classList.toggle('logo-move');
+  logo.classList.toggle('logo-move');
+  document.querySelector('body').classList.toggle('overflow-y')
 
 	document.addEventListener('click', (e) => {
 		if (e.target.closest('.burger') === burger) return;
@@ -74,7 +76,7 @@ if (paginationPageNumber !== null) {
       paginationFirstPage.classList.remove('pagination_inactive');
       paginationPreviousPage.classList.remove('pagination_inactive');
     }
-
+console.log(pets)
   }
 
 	paginationFirstPage.addEventListener('click', (e) => {
@@ -109,3 +111,17 @@ if (paginationPageNumber !== null) {
     paginationButtons()
   });
 }
+
+// Pop Up
+
+const petsContent = document.querySelector('.pets__content');
+
+petsContent.addEventListener('click', (e) => {
+  const pet = e.target.closest('.pet');
+  
+  if(pet){
+    let popUp= new PopUp(pets[+pet.getAttribute('data-index')])
+    popUp.buildPopUp();
+  }
+})
+

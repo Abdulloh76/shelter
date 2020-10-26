@@ -537,6 +537,10 @@ a:visited {
   display: none;
 }
 
+.overflow-y {
+  overflow-y: hidden;
+}
+
 .logo {
   display: inline-block;
   -webkit-box-orient: vertical;
