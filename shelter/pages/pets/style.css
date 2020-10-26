@@ -1029,6 +1029,18 @@ a:visited {
   border-radius: 9px 0 0 9px;
 }
 
+@media (max-width: 1279px) {
+  .pop-up__img {
+    width: 350px;
+  }
+}
+
+@media (max-width: 767px) {
+  .pop-up__img {
+    display: none;
+  }
+}
+
 .pop-up__cancel {
   position: absolute;
   top: -45px;
@@ -1048,12 +1060,38 @@ a:visited {
           align-items: flex-start;
 }
 
+@media (max-width: 1279px) {
+  .pet-information {
+    width: 260px;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .pet-information {
+    width: 220px;
+    padding: 10px;
+  }
+}
+
 .pet-breed {
   margin-top: 10px;
 }
 
 .pet-description {
   margin: 40px 0;
+}
+
+@media (max-width: 1279px) {
+  .pet-description {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.3rem;
+    line-height: 1.1em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 0.06em;
+    margin: 20px 0;
+  }
 }
 
 .pet-properties {
