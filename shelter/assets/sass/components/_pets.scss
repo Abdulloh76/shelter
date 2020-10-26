@@ -16,7 +16,7 @@
       }
    }
 
-   &__content {
+   &__slider {
       width: 100%;
       @extend %flex-between;
       margin: 60px 0;
@@ -25,28 +25,16 @@
          grid-template: 2 / 2;
       }
    }
-   
-   &__card {
-      @include media-laptop {
-         display: none;
-      }
-   }
 
-   &__carousel {
+   &__content {
       @extend %flex-between;
       width: 990px;
       @include media-laptop {
          max-width: 82%;
          justify-content: space-around;
-         &>*:first-child, :nth-child(2) {
-            display: flex;
-         }
       }
 
       @include media-tablet{
-         &>*:nth-child(2){
-            display: none;
-         }
          width: 100%;
          margin-bottom: 20px;
          justify-content: center;

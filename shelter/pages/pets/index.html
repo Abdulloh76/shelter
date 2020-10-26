@@ -12,18 +12,20 @@
    <header class="header header-light">
       <div class="wrapper header__wrapper">
 
-         <a href="#" class="logo logo-dark">
-            <h1 class="logo__title">Cozy House</h1>
-            <p class="logo__subtitle">Shelter for pets in Boston</p>
-         </a>
+         <div class="header__logo">
+            <a href="#" class="logo logo-dark">
+               <h1 class="logo__title">Cozy House</h1>
+               <p class="logo__subtitle">Shelter for pets in Boston</p>
+            </a>
 
-         <span class="header__burger burger burger-dark">
-            <span class="burger__line"></span>
-            <span class="burger__line"></span>
-            <span class="burger__line"></span>
-         </span>
+            <span class="header__burger burger burger-dark">
+               <span class="burger__line"></span>
+               <span class="burger__line"></span>
+               <span class="burger__line"></span>
+            </span>
+         </div>
 
-         <nav class="navigation navigation-light navigation-active">
+         <nav class="navigation navigation-light">
             <ul class="navigation__list">
                <li class="navigation__item paragraph_L">
                   <a href="../main/" class="navigation__link">About the shelter</a>
@@ -47,7 +49,7 @@
       <div class="wrapper pets__wrapper">
 
          <h3 class="pets__title">Our friends who <br>are looking for a house</h3>
-         <div class="pets__content">
+         <div class="pets__content" data-page="pets">
 
             <div class="pets__card pet">
                <img src="../../assets/images/katrine.png" alt="" class="pet__img">
@@ -143,6 +145,8 @@
 
       </div>
    </footer>
+
+   <script type="module" src="../index.js"></script>
    
 </body>
 </html>
