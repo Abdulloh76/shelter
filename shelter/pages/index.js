@@ -48,3 +48,64 @@ fetch('../pets.json').then((res) => res.json()).then((list) => {
 	fullPetsList = sort6recursively(fullPetsList);
 	generatePets(fullPetsList, cardsNumber, pets);
 });
+
+// Pagination
+const paginationFirstPage = document.querySelector('.pagination_first-page'),
+	paginationPreviousPage = document.querySelector('.pagination_previous-page'),
+	paginationPageNumber = document.querySelector('.pagination_page-number'),
+	paginationNextPage = document.querySelector('.pagination_next-page'),
+	paginationLastPage = document.querySelector('.pagination_last-page');
+
+if (paginationPageNumber !== null) {
+  const paginationButtons = () => {
+    if(paginationPageNumber.textContent === '1') {
+      paginationLastPage.classList.remove('pagination_inactive');
+      paginationNextPage.classList.remove('pagination_inactive');
+      paginationFirstPage.classList.add('pagination_inactive');
+      paginationPreviousPage.classList.add('pagination_inactive');
+    } else if(paginationPageNumber.textContent === `${48/cardsNumber}`) {
+      paginationLastPage.classList.add('pagination_inactive');
+      paginationNextPage.classList.add('pagination_inactive');
+      paginationFirstPage.classList.remove('pagination_inactive');
+      paginationPreviousPage.classList.remove('pagination_inactive');
+    } else {
+      paginationLastPage.classList.remove('pagination_inactive');
+      paginationNextPage.classList.remove('pagination_inactive');
+      paginationFirstPage.classList.remove('pagination_inactive');
+      paginationPreviousPage.classList.remove('pagination_inactive');
+    }
+
+  }
+
+	paginationFirstPage.addEventListener('click', (e) => {
+		if (paginationFirstPage.classList.contains('pagination_inactive')) return;
+
+		paginationPageNumber.textContent = '1';
+    generatePets(fullPetsList, cardsNumber, pets);
+    paginationButtons();
+	});
+
+	paginationPreviousPage.addEventListener('click', (e) => {
+		if (paginationPreviousPage.classList.contains('pagination_inactive')) return;
+
+		paginationPageNumber.textContent = `${+paginationPageNumber.textContent - 1}`;
+		generatePets(fullPetsList, cardsNumber, pets, +paginationPageNumber.textContent);
+    paginationButtons()
+	});
+
+	paginationNextPage.addEventListener('click', (e) => {
+		if (paginationNextPage.classList.contains('pagination_inactive')) return;
+
+		paginationPageNumber.textContent = `${+paginationPageNumber.textContent + 1}`;
+		generatePets(fullPetsList, cardsNumber, pets, +paginationPageNumber.textContent);
+    paginationButtons()
+	});
+
+	paginationLastPage.addEventListener('click', (e) => {
+		if (paginationLastPage.classList.contains('pagination_inactive')) return;
+
+		paginationPageNumber.textContent = `${48 / cardsNumber}`;
+		generatePets(fullPetsList, cardsNumber, pets, 48 / cardsNumber);
+    paginationButtons()
+  });
+}
