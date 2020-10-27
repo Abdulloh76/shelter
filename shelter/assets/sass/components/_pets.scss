@@ -26,21 +26,41 @@
       }
    }
 
-   &__content {
-      @extend %flex-between;
-      width: 990px;
-      @include media-laptop {
-         max-width: 82%;
-         justify-content: space-around;
-      }
+   &__container{
+      min-width: 990px;
+      min-height: 435px;
+      position: relative;
+      overflow: hidden;
+      @extend %flex-center;
 
+      @include media-laptop{
+         min-width: 580px;
+      }
       @include media-tablet{
-         width: 100%;
+         min-width: 270px;
          margin-bottom: 20px;
          justify-content: center;
          grid-area: 1 / 1 / 1 / span 2;
          // grid-area = grid-row-start + grid-column-start + grid-row-end + grid-column-end
          justify-self: center;
+      }
+   }
+
+   &__content {
+      position: absolute;
+      width: 100%;
+      @extend %flex-center;
+      justify-content: flex-start;
+      transition: all 1s ease-in-out;
+   }
+
+   &__card{
+      margin-right: 90px;
+      &:last-child{
+         margin-right: 0;
+      }
+      @include media-laptop{
+         margin-right: 40px;
       }
    }
 

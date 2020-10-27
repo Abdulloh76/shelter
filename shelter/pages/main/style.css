@@ -400,7 +400,7 @@ th {
           box-sizing: border-box;
 }
 
-.logo, .burger, .header__wrapper, .navigation__list, .footer__wrapper, .start-screen__wrapper, .pets__slider, .pets__content, .help__wrapper {
+.logo, .burger, .header__wrapper, .navigation__list, .footer__wrapper, .start-screen__wrapper, .pets__slider, .help__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -412,7 +412,7 @@ th {
           align-items: center;
 }
 
-.button-rounded, .header__logo, .footer__link, .about__wrapper, .pets__wrapper, .pet, .help__list, .help__item, .donation__wrapper, .donation__credit-card, .overlay, .pop-up__content, .pet-information {
+.button-rounded, .header__logo, .footer__link, .about__wrapper, .pets__wrapper, .pets__container, .pets__content, .pet, .help__list, .help__item, .donation__wrapper, .donation__credit-card, .overlay, .pop-up__content, .pet-information {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1121,21 +1121,22 @@ a:visited {
   }
 }
 
-.pets__content {
-  width: 990px;
+.pets__container {
+  min-width: 990px;
+  min-height: 435px;
+  position: relative;
+  overflow: hidden;
 }
 
 @media (max-width: 1279px) {
-  .pets__content {
-    max-width: 82%;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+  .pets__container {
+    min-width: 580px;
   }
 }
 
 @media (max-width: 767px) {
-  .pets__content {
-    width: 100%;
+  .pets__container {
+    min-width: 270px;
     margin-bottom: 20px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1146,6 +1147,30 @@ a:visited {
     grid-area: 1 / 1 / 1 / span 2;
     -ms-grid-column-align: center;
         justify-self: center;
+  }
+}
+
+.pets__content {
+  position: absolute;
+  width: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.pets__card {
+  margin-right: 90px;
+}
+
+.pets__card:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 1279px) {
+  .pets__card {
+    margin-right: 40px;
   }
 }
 

@@ -2,7 +2,7 @@ const petsContent = document.querySelector('.pets__content');
 
 export const generatePets = (fullPetsList, cardsNumber, pets, pageNumber = 1) => {
 	petsContent.innerHTML = '';
-	if (petsContent.getAttribute('data-page') === 'main') cardsNumber = Math.round(cardsNumber / 3);
+	// if (petsContent.getAttribute('data-page') === 'main') cardsNumber = Math.round(cardsNumber / 3);
 
 	pageNumber--;
 	for (let i = 0; i < cardsNumber; i++) {
